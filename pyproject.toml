@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cortexlab"
+version = "0.1.0"
+description = "Lightweight event inference helpers for video clips."
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dataframe = [
+    "pandas>=1.5",
+]
+video = [
+    "opencv-python>=4.8",
+]
+dev = [
+    "pytest>=7",
+]
+
+[tool.setuptools.packages.find]
+include = ["cortexlab*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
